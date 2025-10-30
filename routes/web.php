@@ -12,32 +12,22 @@ Route::get('/about', function () {
 })->name('about');
 
 
-
-
-
-
-
 Route::get('/projects', function () {
     
-    $model = new Project();
-    $projects = $model->getAll();
+    
+    $projects = Project::All();
 
     return view('projects.index', compact('projects'));
 })->name('projects');
 
 
-
-
-
 Route::get('/projects/{id}', function ($id) {
 
-    $model = new Project();
-    $project = $model->retrieve($id);
+
+    $project = Project::find($id);
 
     return view('projects.show', compact('project'));
 })->name('projects.show');
-
-
 
 
 Route::get('/contact', function () {

@@ -1,4 +1,4 @@
-<?php
+php -r 'var_dump(function_exists("mb_split"));'<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
