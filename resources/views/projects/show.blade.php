@@ -1,11 +1,14 @@
 <x-layout>
-    <h1>Bienvenue sur la page "Project"</h1>
+    
+    <a 
+    href="{{route('projects')}}" 
+    class="italic text-slate-500"><- On revient en arrière</a>
 
     <ul class="mt-4 list-disc list-inside">
 
-        @foreach ($project as $index)
+        @foreach ($project['technologies'] as $techno)
 
-            <li>{{ $index }}</li>
+            <li>{{ $techno }}</li>
             
         @endforeach
 
